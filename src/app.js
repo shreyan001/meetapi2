@@ -20,7 +20,7 @@ app.use(express.json());
 mongoose.set('strictQuery', true);
 mongoose.connect(process.env.DB_URI);
 
-
+app.use(express.static('public'));
 app.get('/', (req, res) => {
   res.json({
     message: '🦄🌈✨👋🌎🌍🌏✨🌈🦄'
